@@ -42,3 +42,19 @@ for i in enumerate(range(10)):
     print(i)
 # 强制转换为列表
 print(list(range(1, 11)))
+
+print("======")
+
+
+from itertools import accumulate
+
+def my_sub(a, b):
+  print(a,":",b)
+  return b - a
+
+print(list(accumulate([0, 7, 19, 13], my_sub)))
+
+
+print("===operator.__or__===")
+import operator
+print(list(accumulate([0, 7, 19, 13], operator.__or__)))
